@@ -7,7 +7,7 @@ english = Numo::DFloat[44, 87, 100, 63, 52, 60, 58, 73, 55, 86, 29, 56, 89, 23, 
 printf("理科・・・平均：%f, 標準偏差：%f, 合計：%f\n",science.mean, science.stddev, science.sum)
 printf("英語・・・平均：%f, 標準偏差：%f, 合計：%f\n",english.mean, english.stddev, english.sum)
 
-for i in 0..19
+for i in 0..19 #各学生の偏差値
 	shen = (science[i] - science.mean) / science.stddev * 10.0 + 50.0
 	ehen = (english[i] - english.mean) / english.stddev * 10.0 + 50.0
 
@@ -15,8 +15,8 @@ for i in 0..19
 end
 
 print("理科の降順ソート")
-science=science.sort
-p science.reverse
+science=science.sort #昇順にソート
+p science.reverse #逆にソート
 print("英語の降順ソート")
 english = english.sort
 p english.reverse
